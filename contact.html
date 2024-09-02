@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Team 9021</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      header{
+        display: block;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container h1 {
+        color: var(--primary-txt-color);
+        font-family: "Darker Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-size: 320%;
+        font-style: normal;
+        margin-top: 20px;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+      }
+
+      .card-list {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        gap: 20px;
+      }
+
+      .card-list li {
+        flex: 1;
+        margin: 0 10px;
+      }
+
+      .card {
+        background-color: #f3f5f6;
+        padding: 40px 50px;
+        text-align: center;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 350px;
+        height: 350px;
+        box-sizing: border-box;
+      }
+
+      .card h3 {
+        color: var(--primary-txt-color);
+        font-family: "Darker Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-size: 165%;
+        font-style: normal;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        color: var(--primary-txt-color);
+        font-family: "Darker Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-size: 125%;
+        font-style: normal;
+        text-transform: uppercase;
+        margin: 5px 0;
+      }
+
+      .forwarding-button {
+        font-size: 110%;
+        padding: 10px;
+        text-align: center;
+        margin-top: 10%;
+      }
+
+      .forwarding-button a {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        text-decoration: none;
+      }
+
+      @media screen and (max-width: 820px) {
+        
+        html,body {
+          overflow: scroll;
+          height: 100%;
+        }
+
+        header, nav{
+            height: 60px;
+        }
+
+        .container{
+            padding: 0px 0px;
+            margin-top: 0px;
+            justify-content: flex-start;
+        }
+
+        .container h1 {
+          font-size: 200%;
+        }
+
+        .card-list {
+          flex-direction: column;
+          margin-top: 0%;
+        }
+
+        .card {
+          height: 200px;
+          padding-top: 0px;
+        }
+
+        .card h3 {
+          font-size: 125%;
+          margin-bottom: 0px;
+        }
+
+        .card p {
+          font-size: 100%;
+          margin: 0px 0px;
+        }
+
+        .forwarding-button {
+          font-size: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="scripts/spinner.js"></script>
+    <div id="overlay" class="overlay">
+      <img
+        id="loading-image"
+        src="assets/img/logo.jpg"
+        alt="Loading"
+        class="loading-image"
+      />
+    </div>
+
+    <header>
+      <nav>
+        <div class="navbar">
+          <a href="index.html">
+            <img src="assets/img/logo.jpg" alt="Team Logo" />
+          </a>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="documents.html">Docs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>get in touch with our team</h1>
+      <ul class="card-list">
+        <li>
+          <div class="card">
+            <h3>Kazım Efe Adagide</h3>
+            <p>Team Captain</p>
+            <p>+90 530 823 73 05</p>
+            <button class="forwarding-button">
+              <a href="mailto:kazimefeadagide@gmail.com">Send Email</a>
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <h3>Email</h3>
+            <p>Send us an email and we'll get back to you soon.</p>
+            <button class="forwarding-button">
+              <a href="mailto:uselesscase9021@gmail.com">Send Email</a>
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <h3>Dila Çağatay</h3>
+            <p>Public Relations Captain</p>
+            <p>+90 530 823 73 05</p>
+            <button class="forwarding-button">
+              <a href="mailto:dila_cagatay@gmail.com">Send Email</a>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

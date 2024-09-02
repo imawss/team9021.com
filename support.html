@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support | Team 9021</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        text-align: center;
+      }
+
+      #big-title{
+        font-size: 1000%;
+        margin: 0%;
+        text-transform: uppercase;
+      }
+
+      .replacer h1 {
+        color: var(--primary-txt-color);
+        font-family: "Darker Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-size: 320%;
+        font-style: normal;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        margin: 0%;
+      }
+
+      .replacer p{
+        color: var(--primary-txt-color);
+        font-family: "Darker Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-size: 125%;
+        font-style: normal;
+        text-transform: uppercase;
+      }
+
+      @media screen and (max-width: 820px) {
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay" class="overlay">
+      <img
+        id="loading-image"
+        src="assets/img/logo.jpg"
+        alt="Loading"
+        class="loading-image"
+      />
+    </div>
+
+    <header>
+      <nav>
+        <div class="navbar">
+          <a href="index.html">
+            <img src="assets/img/logo.jpg" alt="Team Logo" />
+          </a>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="documents.html">Docs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="replacer">
+        <h1 id="big-title">404</h1>
+        <h1>Coming Soon!</h1>
+        <p>
+          Oopsy! Doesn't look like this place is ready. Don't worry, it'll be
+          finished soon.
+        </p>
+      </div>
+    </div>
+    <script src="scripts/spinner.js"></script>
+  </body>
+</html>
