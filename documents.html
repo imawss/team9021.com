@@ -22,6 +22,32 @@
         .column-content h2{
             text-transform: uppercase;
         }
+
+        details {
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        summary {
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        details[open] summary {
+            background-color: #d9d9d9;
+        }
+
+        details p {
+            margin: 10px;
+            padding: 10px;
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -49,17 +75,42 @@
         <div class="column" id="left-column">
             <div class="column-content">
                 <h2>Projects</h2>
-                <div class="card-li">
-                    <li class="project-li"></li>
-                </div>
+
+                <details>
+                    <summary>EÇEV</summary>
+                    <p>Our project that aims to provide equal opportunity in education to children between the ages of 5-13 who have difficult access to education and to provide them with various types of board games and chess training in the workshops we have opened within EÇEV.
+                    </p>
+                </details>
+            
+                <details>
+                    <summary>Kısa Başlık 2</summary>
+                    <p>Bu, ikinci başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
+                </details>
+            
+                <details>
+                    <summary>Kısa Başlık 3</summary>
+                    <p>Bu, üçüncü başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
+                </details>
             </div>
         </div>
         <div class="column" id="right-column">
             <div class="column-content">
                 <h2>Documents</h2>
-                <div class="card-li">
-                    <li class="doc-li"></li>
-                </div>
+
+                <details>
+                    <summary>Kısa Başlık 1</summary>
+                    <p>Bu, birinci başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
+                </details>
+            
+                <details>
+                    <summary>Kısa Başlık 2</summary>
+                    <p>Bu, ikinci başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
+                </details>
+            
+                <details>
+                    <summary>Kısa Başlık 3</summary>
+                    <p>Bu, üçüncü başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
+                </details>
             </div>
         </div>
     </div>
