@@ -11,26 +11,26 @@
       type="image/x-icon"
     />
     <style>
-.container {
-  display: flex;
-  justify-content: center; /* İki sütunu yatayda ortalamak için */
-  align-items: center; /* İçerikleri dikeyde ortalamak için */
-  gap: 100px; /* İki sütun arasındaki boşluğu artırmak için */
-  height: 100vh; /* Sayfanın tamamını kaplamasını sağlamak için */
-  padding-top: 0; /* Üst boşluğu sıfırlıyoruz */
-}
+      .container {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        width: 80%; 
+        margin: 0 auto; 
+        padding-top: 100px; 
+      }
 
-.column {
-  width: 40%; /* Sütun genişliğini ayarlıyoruz */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Sütun içindeki içerikleri dikeyde ortalamak için */
-  align-items: center; /* Sütun içindeki içerikleri yatayda ortalamak için */
-}
+      .column {
+        width: 45%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+      }
 
-.column-content {
-  text-align: center; /* İçerikleri ortalıyoruz */
-}
+      .column-content {
+        text-align: center;
+      }
 
       #about-p {
         font-size: larger;
@@ -86,11 +86,14 @@
         -moz-transition: 0.4s ease;
         -o-transition: 0.4s ease;
         transition: 0.4s ease;
+        max-height: 0;
       }
 
       .panel:checked ~ .panel-content {
         height: auto;
         opacity: 1;
+        padding: 14px;
+        max-height: 200px; 
         padding: 14px;
       }
 
@@ -140,74 +143,105 @@
     </header>
 
     <div class="container">
-        <div class="column" id="left-column">
-          <div class="column-content">
-            <div class="faq-header">Projects</div>
-  
-            <div class="faq-content">
-              <div class="faq-question">
-                <input id="q1" type="checkbox" class="panel">
-                <label for="q1" class="panel-title">EÇEV</label>
-                <div class="panel-content">FRC (FIRST Robotics Competition) is an international robotics competition where students design, build, and program robots to complete specific tasks. It helps them develop skills in engineering, teamwork, and problem-solving, encouraging interest in STEM fields.</div>
+      <div class="column" id="left-column">
+        <div class="column-content">
+          <div class="faq-header">Projects</div>
+          <div class="faq-content">
+            <div class="faq-question">
+              <input id="q1" type="checkbox" class="panel" />
+              <label for="q1" class="panel-title">EÇEV</label>
+              <div class="panel-content">
+                Our project that aims to provide equal opportunity in education
+                to children between the ages of 5-13 who have difficult access
+                to education and to provide them with various types of board
+                games and chess training in the workshops we have opened within
+                EÇEV.
               </div>
-              
-              <div class="faq-question">
-                <input id="q2" type="checkbox" class="panel">
-                <label for="q2" class="panel-title">TOG</label>
-                <div class="panel-content">Your sponsorship helps us meet important needs such as robot parts, competition entry fees, team travel expenses and educational materials. </div>
+            </div>
+            <div class="faq-question">
+              <input id="q2" type="checkbox" class="panel" />
+              <label for="q2" class="panel-title">TOG</label>
+              <div class="panel-content">
+                Our project in which we aim to carry out our joint projects
+                written by the community volunteer individuals of our team and
+                TOG by going through the orientation process of Toplum
+                Gönüllüleri Vakfı.
               </div>
-
-              <div class="faq-question">
-                <input id="q8" type="checkbox" class="panel">
-                <label for="q8" class="panel-title">FLL Mentörlük</label>
-                <div class="panel-content">Sponsoring our team boosts your brand visibility, demonstrates your support for STEM education, and connects you with future innovators. For more details, visit our support page.</div>
+            </div>
+            <div class="faq-question">
+              <input id="q3" type="checkbox" class="panel" />
+              <label for="q3" class="panel-title">FLL Mentörlük</label>
+              <div class="panel-content">
+                Our project that aims to develop young people's skills in STEM
+                fields, increase their problem solving skills, strengthen their
+                social skills such as teamwork and leadership by mentoring the
+                FLL team.
               </div>
-
-              <div class="faq-question">
-                <input id="q9" type="checkbox" class="panel">
-                <label for="q9" class="panel-title">LÖSEV</label>
-                <div class="panel-content">Sponsoring our team boosts your brand visibility, demonstrates your support for STEM education, and connects you with future innovators. For more details, visit our support page.</div>
-              </div>
+            </div>
+            <div class="faq-question">
+              <input id="q4" type="checkbox" class="panel" />
+              <label for="q4" class="panel-title">LÖSEV</label>
+              <div class="panel-content">
+                Our project, which aims to participate in a walking event as
+                high school students in order to raise awareness and provide
+                support within the scope of LÖSEV (Lösemili Çocuklar Sağlık ve
+                Eğitim Vakfı) Week
               </div>
             </div>
           </div>
         </div>
-        <div class="column" id="right-column">
-          <div class="column-content">
-            <div class="faq-header">Documents</div>
-  
-            <div class="faq-content">
-              <div class="faq-question">
-                <input id="q4" type="checkbox" class="panel">
-                <label for="q4" class="panel-title">uSELESScASE'25 Business Plan</label>
-                <div class="panel-content"><a href="assets/docs/business-plan.pdf" download="business-plan.pdf">Download File</a></div>
-              </div>
-              
-              <div class="faq-question">
-                <input id="q5" type="checkbox" class="panel">
-                <label for="q5" class="panel-title">uSELESScASE'25 Gender Equality</label>
-                <div class="panel-content"><a href="assets/docs/gender-equality.pdf" download="gender-equality.pdf">Download File</a></div>
-              </div>
-              
-              <div class="faq-question">
-                <input id="q6" type="checkbox" class="panel">
-                <label for="q6" class="panel-title">uSELESScASE'25 Sponsorship File</label>
-                <div class="panel-content"><a href="assets/docs/sponsorship.pdf" download="sponsorship.pdf">Download File</a></div>
+      </div>
+
+      <div class="column" id="right-column">
+        <div class="column-content">
+          <div class="faq-header">Documents</div>
+          <div class="faq-content">
+            <div class="faq-question">
+              <input id="q5" type="checkbox" class="panel" />
+              <label for="q5" class="panel-title"
+                >uSELESScASE'25 Business Plan</label
+              >
+              <div class="panel-content">
+                <a href="assets/docs/business-plan.pdf" download
+                  >Download File</a
+                >
               </div>
             </div>
+            <div class="faq-question">
+              <input id="q6" type="checkbox" class="panel" />
+              <label for="q6" class="panel-title"
+                >uSELESScASE'25 Gender Equality</label
+              >
+              <div class="panel-content">
+                <a href="assets/docs/gender-equality.pdf" download
+                  >Download File</a
+                >
+              </div>
+            </div>
+            <div class="faq-question">
+              <input id="q7" type="checkbox" class="panel" />
+              <label for="q7" class="panel-title"
+                >uSELESScASE'25 Sponsorship File</label
+              >
+              <div class="panel-content">
+                <a href="assets/docs/sponsorship.pdf" download>Download File</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <script>
-        document.querySelectorAll('.panel').forEach((checkbox) => {
-          checkbox.addEventListener('change', function() {
-            document.querySelectorAll('.panel').forEach((otherCheckbox) => {
-              if (otherCheckbox !== this) {
-                otherCheckbox.checked = false;
-              }
-            });
+    </div>
+    <script>
+      document.querySelectorAll(".panel").forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          document.querySelectorAll(".panel").forEach((otherCheckbox) => {
+            if (otherCheckbox !== this) {
+              otherCheckbox.checked = false;
+            }
           });
         });
-      </script>
+      });
+    </script>
     <script src="scripts/spinner.js"></script>
   </body>
 </html>
