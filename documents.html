@@ -1,120 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team 9021 | Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
     <style>
-        .image-sec{
-            width: 100%;
-            height: 300px;
+.container {
+  display: flex;
+  justify-content: center; /* İki sütunu yatayda ortalamak için */
+  align-items: center; /* İçerikleri dikeyde ortalamak için */
+  gap: 100px; /* İki sütun arasındaki boşluğu artırmak için */
+  height: 100vh; /* Sayfanın tamamını kaplamasını sağlamak için */
+  padding-top: 0; /* Üst boşluğu sıfırlıyoruz */
+}
+
+.column {
+  width: 40%; /* Sütun genişliğini ayarlıyoruz */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Sütun içindeki içerikleri dikeyde ortalamak için */
+  align-items: center; /* Sütun içindeki içerikleri yatayda ortalamak için */
+}
+
+.column-content {
+  text-align: center; /* İçerikleri ortalıyoruz */
+}
+
+      #about-p {
+        font-size: larger;
+        padding: 0px 64px;
+      }
+
+      .faq-header {
+        color: var(--primary-txt-color);
+        font-family: "Darker Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-size: 300%;
+        font-style: normal;
+        margin-top: 20px;
+      }
+
+      .faq-content {
+        margin: 0 auto;
+      }
+
+      .faq-question {
+        padding: 20px 0;
+        border-bottom: 3px solid #e7eaec;
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      .panel-title {
+        color: var(--secondary-txt-color);
+        font-family: "Poppins", sans-serif;
+        font-size: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .panel-content {
+        color: var(--secondary-txt-color);
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 15px;
+        padding: 0px 14px;
+        margin: 0 40px;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        position: relative;
+        opacity: 0;
+        -webkit-transition: 0.4s ease;
+        -moz-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
+        transition: 0.4s ease;
+      }
+
+      .panel:checked ~ .panel-content {
+        height: auto;
+        opacity: 1;
+        padding: 14px;
+      }
+
+      .panel {
+        display: none;
+      }
+      @media screen and (max-width: 820px) {
+        .faq-question {
+          width: 300px;
         }
 
-        .image-sec img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            
+        .faq-header {
+          font-size: 200%;
         }
 
-        .column-content h2{
-            text-transform: uppercase;
+        .panel-content {
+          padding: 0px 0px;
+          margin: 0px;
         }
-
-        details {
-            margin-bottom: 10px;
-            font-family: Arial, sans-serif;
-        }
-
-        summary {
-            font-size: 1.2em;
-            cursor: pointer;
-            background-color: #f2f2f2;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        details[open] summary {
-            background-color: #d9d9d9;
-        }
-
-        details p {
-            margin: 10px;
-            padding: 10px;
-            background-color: #fafafa;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="overlay" class="overlay">
-        <img id="loading-image" src="assets/img/logo.jpg" alt="Loading" class="loading-image">
+      <img
+        id="loading-image"
+        src="assets/img/logo.jpg"
+        alt="Loading"
+        class="loading-image"
+      />
     </div>
-    
+
     <header>
-        <nav>
-            <div class="navbar">
-                <a href="index.html">
-                    <img src="assets/img/logo.jpg" alt="Team Logo">
-                </a>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="documents.html">Docs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav>
+        <div class="navbar">
+          <a href="index.html">
+            <img src="assets/img/logo.jpg" alt="Team Logo" />
+          </a>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="documents.html">Docs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <div class="container">
         <div class="column" id="left-column">
-            <div class="column-content">
-                <h2>Projects</h2>
+          <div class="column-content">
+            <div class="faq-header">Projects</div>
+  
+            <div class="faq-content">
+              <div class="faq-question">
+                <input id="q1" type="checkbox" class="panel">
+                <label for="q1" class="panel-title">EÇEV</label>
+                <div class="panel-content">FRC (FIRST Robotics Competition) is an international robotics competition where students design, build, and program robots to complete specific tasks. It helps them develop skills in engineering, teamwork, and problem-solving, encouraging interest in STEM fields.</div>
+              </div>
+              
+              <div class="faq-question">
+                <input id="q2" type="checkbox" class="panel">
+                <label for="q2" class="panel-title">TOG</label>
+                <div class="panel-content">Your sponsorship helps us meet important needs such as robot parts, competition entry fees, team travel expenses and educational materials. </div>
+              </div>
 
-                <details>
-                    <summary>EÇEV</summary>
-                    <p>Our project that aims to provide equal opportunity in education to children between the ages of 5-13 who have difficult access to education and to provide them with various types of board games and chess training in the workshops we have opened within EÇEV.
-                    </p>
-                </details>
-            
-                <details>
-                    <summary>Kısa Başlık 2</summary>
-                    <p>Bu, ikinci başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
-                </details>
-            
-                <details>
-                    <summary>Kısa Başlık 3</summary>
-                    <p>Bu, üçüncü başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
-                </details>
+              <div class="faq-question">
+                <input id="q8" type="checkbox" class="panel">
+                <label for="q8" class="panel-title">FLL Mentörlük</label>
+                <div class="panel-content">Sponsoring our team boosts your brand visibility, demonstrates your support for STEM education, and connects you with future innovators. For more details, visit our support page.</div>
+              </div>
+
+              <div class="faq-question">
+                <input id="q9" type="checkbox" class="panel">
+                <label for="q9" class="panel-title">LÖSEV</label>
+                <div class="panel-content">Sponsoring our team boosts your brand visibility, demonstrates your support for STEM education, and connects you with future innovators. For more details, visit our support page.</div>
+              </div>
+              </div>
             </div>
+          </div>
         </div>
         <div class="column" id="right-column">
-            <div class="column-content">
-                <h2>Documents</h2>
-
-                <details>
-                    <summary>Kısa Başlık 1</summary>
-                    <p>Bu, birinci başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
-                </details>
-            
-                <details>
-                    <summary>Kısa Başlık 2</summary>
-                    <p>Bu, ikinci başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
-                </details>
-            
-                <details>
-                    <summary>Kısa Başlık 3</summary>
-                    <p>Bu, üçüncü başlığın açıklamasıdır. Tıklayınca bu metin açılır.</p>
-                </details>
+          <div class="column-content">
+            <div class="faq-header">Documents</div>
+  
+            <div class="faq-content">
+              <div class="faq-question">
+                <input id="q4" type="checkbox" class="panel">
+                <label for="q4" class="panel-title">uSELESScASE'25 Business Plan</label>
+                <div class="panel-content"><a href="assets/docs/business-plan.pdf" download="business-plan.pdf">Download File</a></div>
+              </div>
+              
+              <div class="faq-question">
+                <input id="q5" type="checkbox" class="panel">
+                <label for="q5" class="panel-title">uSELESScASE'25 Gender Equality</label>
+                <div class="panel-content"><a href="assets/docs/gender-equality.pdf" download="gender-equality.pdf">Download File</a></div>
+              </div>
+              
+              <div class="faq-question">
+                <input id="q6" type="checkbox" class="panel">
+                <label for="q6" class="panel-title">uSELESScASE'25 Sponsorship File</label>
+                <div class="panel-content"><a href="assets/docs/sponsorship.pdf" download="sponsorship.pdf">Download File</a></div>
+              </div>
             </div>
         </div>
-    </div>
-
+      </div>
+      <script>
+        document.querySelectorAll('.panel').forEach((checkbox) => {
+          checkbox.addEventListener('change', function() {
+            document.querySelectorAll('.panel').forEach((otherCheckbox) => {
+              if (otherCheckbox !== this) {
+                otherCheckbox.checked = false;
+              }
+            });
+          });
+        });
+      </script>
     <script src="scripts/spinner.js"></script>
-</body>
+  </body>
 </html>
