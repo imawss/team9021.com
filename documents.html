@@ -185,7 +185,7 @@
                 Our project, which aims to participate in a walking event as
                 high school students in order to raise awareness and provide
                 support within the scope of LÖSEV (Lösemili Çocuklar Sağlık ve
-                Eğitim Vakfı) Week
+                Eğitim Vakfı) Week.
               </div>
             </div>
           </div>
@@ -197,51 +197,51 @@
           <div class="faq-header">Documents</div>
           <div class="faq-content">
             <div class="faq-question">
-              <input id="q5" type="checkbox" class="panel" />
-              <label for="q5" class="panel-title"
-                >uSELESScASE'25 Business Plan</label
+              <label
+                for="q5"
+                class="panel-title"
+                data-file="assets/docs/business-plan.pdf"
               >
-              <div class="panel-content">
-                <a href="assets/docs/business-plan.pdf" download
-                  >Download File</a
-                >
-              </div>
+                uSELESScASE'25 Business Plan
+              </label>
             </div>
             <div class="faq-question">
-              <input id="q6" type="checkbox" class="panel" />
-              <label for="q6" class="panel-title"
-                >uSELESScASE'25 Gender Equality</label
+              <label
+                for="q6"
+                class="panel-title"
+                data-file="assets/docs/gender-equality.pdf"
               >
-              <div class="panel-content">
-                <a href="assets/docs/gender-equality.pdf" download
-                  >Download File</a
-                >
-              </div>
+                uSELESScASE'25 Gender Equality
+              </label>
             </div>
             <div class="faq-question">
-              <input id="q7" type="checkbox" class="panel" />
-              <label for="q7" class="panel-title"
-                >uSELESScASE'25 Sponsorship File</label
+              <label
+                for="q7"
+                class="panel-title"
+                data-file="assets/docs/sponsorship.pdf"
               >
-              <div class="panel-content">
-                <a href="assets/docs/sponsorship.pdf" download>Download File</a>
-              </div>
+                uSELESScASE'25 Sponsorship File
+              </label>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <script>
-      document.querySelectorAll(".panel").forEach((checkbox) => {
-        checkbox.addEventListener("change", function () {
-          document.querySelectorAll(".panel").forEach((otherCheckbox) => {
-            if (otherCheckbox !== this) {
-              otherCheckbox.checked = false;
+  
+      <script>
+        document.querySelectorAll(".panel-title").forEach((title) => {
+          title.addEventListener("click", function () {
+            const filePath = this.getAttribute("data-file");
+            if (filePath) {
+              const downloadLink = document.createElement("a");
+              downloadLink.href = filePath;
+              downloadLink.download = filePath.split("/").pop();
+              document.body.appendChild(downloadLink);
+              downloadLink.click();
+              document.body.removeChild(downloadLink);
             }
           });
         });
-      });
-    </script>
+      </script>
     <script src="scripts/spinner.js"></script>
   </body>
 </html>
